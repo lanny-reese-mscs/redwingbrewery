@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App2"
+             x:Class="App2.MainPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="60" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text=""
+                 Grid.Row="0" Grid.Column="0" />
+
+        <Label Text="Regular Price"
+                 Grid.Row="0" Grid.Column="1" />
+
+        <Label Text="Amount"
+                 Grid.Row="0" Grid.Column="2" />
+
+        <Label Text="Amount Cost"
+                 Grid.Row="0" Grid.Column="3" />
+
+        <Label Text="Extra Toppings"
+                 Grid.Row="0" Grid.Column="4" />
+
+        <Label Text="Extra Topping Cost"
+                 Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="2"/>
+
+        <Label Text="SubTotal"
+                 Grid.Row="0" Grid.Column="7" />
+
+        <Label Text=""
+                 Grid.Row="0" Grid.Column="8" />
+
+        <Label Text=""
+                 Grid.Row="0" Grid.Column="9" />
+        
+        
+
+        <Label Text="Large Special"
+                 Grid.Row="1" Grid.Column="0" />
+
+        <Label Text="24.95"
+                 Grid.Row="1" Grid.Column="1"
+                 x:Name="lsp"/>
+        
+        <Entry Placeholder="0"
+                 Grid.Row="1" Grid.Column="2" x:Name="lsa"
+                 TextChanged="Lsa_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="1" Grid.Column="3" 
+                 x:Name="lsc"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="1" Grid.Column="4" 
+                 x:Name="lset"
+                 TextChanged="Lset_TextChanged"/>
+
+        <Label Text="2.50"
+                 Grid.Row="1" Grid.Column="5" 
+                 x:Name="lsetp"/>
+
+        <Label Text="0"
+                 Grid.Row="1" Grid.Column="6" 
+                 x:Name="lsetc"/>
+
+        <Label Text="0"
+                 Grid.Row="1" Grid.Column="7" 
+                 x:Name="lss"/>
+
+        <Label Text="Food Total"
+                 Grid.Row="1" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="1" Grid.Column="9" 
+                 x:Name="total"/>
+        
+        
+
+        <Label Text="Small Special"
+                 Grid.Row="2" Grid.Column="0" />
+
+        <Label Text="13.95"
+                 Grid.Row="2" Grid.Column="1" 
+                  x:Name="ssp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="2" Grid.Column="2" 
+                 x:Name="ssa"
+                 TextChanged="Ssa_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="2" Grid.Column="3" 
+                 x:Name="ssc"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="2" Grid.Column="4" 
+                 x:Name="sset"
+                 TextChanged="Sset_TextChanged"/>
+
+        <Label Text="1.50"
+                 Grid.Row="2" Grid.Column="5" 
+                 x:Name="ssetp"/>
+
+        <Label Text="0"
+                 Grid.Row="2" Grid.Column="6" 
+                 x:Name="ssetc"/>
+
+        <Label Text="0"
+                 Grid.Row="2" Grid.Column="7" 
+                 x:Name="sss"/>
+
+        <Label Text="Seperation"
+                 Grid.Row="2" Grid.Column="8" />
+
+        <Entry Placeholder="1" 
+                 Text="1"
+                 Grid.Row="2" Grid.Column="9" 
+                 x:Name="seperation"
+                 TextChanged="sep_TextChanged"/>
+
+
+        <Label Text="Large Build Your Own"
+                 Grid.Row="3" Grid.Column="0" />
+
+        <Label Text="17.95"
+                 Grid.Row="3" Grid.Column="1" 
+                 x:Name="lbp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="3" Grid.Column="2" 
+                 x:Name="lba"
+                 TextChanged="Lba_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="3" Grid.Column="3" 
+                  x:Name="lbc"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="3" Grid.Column="4" 
+                 x:Name="lbet"
+                 TextChanged="Lbet_TextChanged"/>
+
+        <Label Text="2.50"
+                 Grid.Row="3" Grid.Column="5" 
+                 x:Name="lbetp"/>
+
+        <Label Text="0"
+                 Grid.Row="3" Grid.Column="6" 
+                 x:Name="lbetc"/>
+
+        <Label Text="0"
+                 Grid.Row="3" Grid.Column="7" 
+                 x:Name="lbs"/>
+
+        <Label Text="New Total"
+                 Grid.Row="3" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="3" Grid.Column="9" 
+                 x:Name="newtotal"/>
+
+
+        <Label Text="Small Build Your Own"
+                 Grid.Row="4" Grid.Column="0" />
+
+        <Label Text="9.95"
+                 Grid.Row="4" Grid.Column="1" 
+                 x:Name="sbp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="4" Grid.Column="2" 
+                 x:Name="sba"
+                 TextChanged="Sba_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="4" Grid.Column="3" 
+                 x:Name="sbc"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="4" Grid.Column="4" 
+                 x:Name="sbet"
+                 TextChanged="Sbet_TextChanged"/>
+
+        <Label Text="1.50"
+                 Grid.Row="4" Grid.Column="5" 
+                 x:Name="sbetp"/>
+
+        <Label Text="0"
+                 Grid.Row="4" Grid.Column="6" 
+                 x:Name="sbetc"/>
+
+        <Label Text="0"
+                 Grid.Row="4" Grid.Column="7" 
+                 x:Name="sbs"/>
+
+        <Label Text="Tax"
+                 Grid.Row="4" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="4" Grid.Column="9" 
+                 x:Name="tax"/>
+
+
+        <Label Text="Cheesy Bread"
+                 Grid.Row="5" Grid.Column="0" />
+
+        <Label Text="7.95"
+                 Grid.Row="5" Grid.Column="1" 
+                 x:Name="cbp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="5" Grid.Column="2" 
+                 x:Name="cba"
+                 TextChanged="Cba_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="5" Grid.Column="3" 
+                 x:Name="cbc"/>
+
+        <Label Text=""
+                 Grid.Row="5" Grid.Column="4" />
+
+        <Label Text=""
+                 Grid.Row="5" Grid.Column="5" />
+
+        <Label Text=""
+                 Grid.Row="5" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="5" Grid.Column="7" 
+                 x:Name="cbs"/>
+
+        <Label Text="Total Plus Tax"
+                 Grid.Row="5" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="5" Grid.Column="9" 
+               x:Name="totalplustax"/>
+
+
+        <Label Text="Brewery Sticks"
+                 Grid.Row="6" Grid.Column="0" />
+
+        <Label Text="7.95"
+                 Grid.Row="6" Grid.Column="1" 
+                 x:Name="bsp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="6" Grid.Column="2" 
+                 x:Name="bsa"
+                  TextChanged="Bsa_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="6" Grid.Column="3" 
+                 x:Name="bsc"/>
+
+        <Label Text=""
+                 Grid.Row="6" Grid.Column="4" />
+
+        <Label Text=""
+                 Grid.Row="6" Grid.Column="5" />
+
+        <Label Text=""
+                 Grid.Row="6" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="6" Grid.Column="7" 
+                 x:Name="bss"/>
+
+        <Label Text="Drink Total"
+                 Grid.Row="6" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="6" Grid.Column="9" />
+
+
+        <Label Text="Small Salad"
+                 Grid.Row="7" Grid.Column="0" />
+
+        <Label Text="5.95"
+                 Grid.Row="7" Grid.Column="1" 
+                 x:Name="ssaladp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="7" Grid.Column="2" 
+                 x:Name="ssalada"
+                 TextChanged="Ssalada_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="7" Grid.Column="3" 
+                 x:Name="ssaladc"/>
+
+        <Label Text=""
+                 Grid.Row="7" Grid.Column="4" />
+
+        <Label Text=""
+                 Grid.Row="7" Grid.Column="5" />
+
+        <Label Text=""
+                 Grid.Row="7" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="7" Grid.Column="7" 
+                 x:Name="ssalads"/>
+
+        <Label Text="20% off"
+                 Grid.Row="7" Grid.Column="8" />
+
+        <Switch IsToggled="false"
+                 Grid.Row="7" Grid.Column="9"
+                x:Name="discountswitch"
+                 Toggled="Switch_Toggled"/>
+
+
+        <Label Text="Large Salad"
+                 Grid.Row="8" Grid.Column="0" />
+
+        <Label Text="10.95"
+                 Grid.Row="8" Grid.Column="1" 
+                 x:Name="lsaladp"/>
+
+        <Entry Placeholder="0"
+                 Grid.Row="8" Grid.Column="2" 
+                 x:Name="lsalada"
+                 TextChanged="Lsalada_TextChanged"/>
+
+        <Label Text="0"
+                 Grid.Row="8" Grid.Column="3" 
+                 x:Name="lsaladc"/>
+
+        <Label Text=""
+                 Grid.Row="8" Grid.Column="4" />
+
+        <Label Text=""
+                 Grid.Row="8" Grid.Column="5" />
+
+        <Label Text=""
+                 Grid.Row="8" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="8" Grid.Column="7" 
+                 x:Name="lsalads"/>
+
+        <Label Text="Grand Total"
+                 Grid.Row="8" Grid.Column="8" />
+
+        <Label Text="0"
+                 Grid.Row="8" Grid.Column="9" 
+                 x:Name="grandtotal"/>
+
+        <Label Text=""
+                Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="5" />
+        
+        <Label Text="Tax Rate"
+                Grid.Row="9" Grid.Column="5"/>
+
+        <Label Text="0.07375"
+                Grid.Row="9" Grid.Column="7"
+                x:Name="taxrate"/>
+
+
+        <Button Text="Clear All" 
+                Grid.Row="9" Grid.Column="8" Grid.ColumnSpan="2" 
+                Clicked="Clearall_Clicked"
+                x:Name="clearall"/>
+        
+
+        <Label Text="RW Pint"
+                 Grid.Row="10" Grid.Column="0" />
+
+        <Label Text="6.00"
+                 Grid.Row="10" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="10" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="10" Grid.Column="3" />
+        
+        <Label Text="Guest Pint"
+                 Grid.Row="10" Grid.Column="4" />
+
+        <Label Text="6.00"
+                 Grid.Row="10" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="10" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="10" Grid.Column="7" />
+
+
+        <Label Text="RW Snit"
+                 Grid.Row="11" Grid.Column="0" />
+
+        <Label Text="3.75"
+                 Grid.Row="11" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="11" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="11" Grid.Column="3" />
+
+        <Label Text="Guest Snit"
+                 Grid.Row="11" Grid.Column="4" />
+
+        <Label Text="3.75"
+                 Grid.Row="11" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="11" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="11" Grid.Column="7" />
+
+
+        <Label Text="RW Flight"
+                 Grid.Row="12" Grid.Column="0" />
+
+        <Label Text="2.50"
+                 Grid.Row="12" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="12" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="12" Grid.Column="3" />
+
+        <Label Text="Guest Flight"
+                 Grid.Row="12" Grid.Column="4" />
+
+        <Label Text="2.50"
+                 Grid.Row="12" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="12" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="12" Grid.Column="7" />
+
+
+        <Label Text="Bloody Mary"
+                 Grid.Row="13" Grid.Column="0" />
+
+        <Label Text="10.00"
+                 Grid.Row="13" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="13" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="13" Grid.Column="3" />
+
+        <Label Text="Wine"
+                 Grid.Row="13" Grid.Column="4" />
+
+        <Label Text="7.50"
+                 Grid.Row="13" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="13" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="13" Grid.Column="7" />
+
+
+        <Label Text="Root Beer"
+                 Grid.Row="14" Grid.Column="0" />
+
+        <Label Text="4.00"
+                 Grid.Row="14" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="14" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="14" Grid.Column="3" />
+
+        <Label Text="Pop"
+                 Grid.Row="14" Grid.Column="4" />
+
+        <Label Text="3.00"
+                 Grid.Row="14" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="14" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="14" Grid.Column="7" />
+
+
+        <Label Text="Root Beer Snit"
+                 Grid.Row="15" Grid.Column="0" />
+
+        <Label Text="3.00"
+                 Grid.Row="15" Grid.Column="1" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="15" Grid.Column="2" />
+
+        <Label Text="0"
+                 Grid.Row="15" Grid.Column="3" />
+
+        <Label Text="Coffee, Juice, Milk"
+                 Grid.Row="15" Grid.Column="4" />
+
+        <Label Text="2.50"
+                 Grid.Row="15" Grid.Column="5" />
+
+        <Entry Placeholder="0"
+                 Grid.Row="15" Grid.Column="6" />
+
+        <Label Text="0"
+                 Grid.Row="15" Grid.Column="7" />
+
+        <Button Text="Enter prices" 
+                Grid.Row="9" Grid.Column="3" 
+                Clicked="EnterPriceButton_Clicked"/>
+        
+        <Button Text="Refresh prices" 
+                Grid.Row="9" Grid.Column="4" 
+                Clicked="RefreshButton_Clicked"/>
+
+        <!--<BoxView Color="Teal"
+                 Grid.Row="1" Grid.Column="0" />
+
+        <Label Text="Leftover space"
+               Grid.Row="1" Grid.Column="1"
+               TextColor="Purple"
+               BackgroundColor="Aqua"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Span two rows (or more if you want)"
+               Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
+               TextColor="Yellow"
+               BackgroundColor="Blue"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Span two columns"
+               Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+               TextColor="Blue"
+               BackgroundColor="Yellow"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />
+
+        <Label Text="Fixed 100x100"
+               Grid.Row="2" Grid.Column="2"
+               TextColor="Aqua"
+               BackgroundColor="Red"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center" />-->
+    </Grid>
+</ContentPage>
