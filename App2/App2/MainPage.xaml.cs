@@ -87,6 +87,7 @@ namespace App2
             lsc.Text = subtotalpizza.ToString("n2");
             if (amount > 0)
             {
+                lset.IsEnabled = true;
                 Label lss = this.FindByName<Label>("lss");
                 Label lsetc = this.FindByName<Label>("lsetc");
                 Decimal subtotaltopping = 0.0m;
@@ -101,6 +102,7 @@ namespace App2
                 lset.Text = "";
                 Label lss = this.FindByName<Label>("lss");
                 lss.Text = "0";
+                lset.IsEnabled = false;
             }
         }
 
@@ -109,25 +111,18 @@ namespace App2
             Label lsc = this.FindByName<Label>("lsc");
             Decimal subtotalpizza = 0.0m;
             Decimal.TryParse(lsc.Text, out subtotalpizza);
-            if (subtotalpizza > 0)
-            {
-                Label lsetp = this.FindByName<Label>("lsetp");
-                Decimal cost = 0.0m;
-                Decimal.TryParse(lsetp.Text, out cost);
-                Entry lset = this.FindByName<Entry>("lset");
-                Decimal amount = 0.0m;
-                Decimal.TryParse(lset.Text, out amount);
-                Decimal subtotaltopping = cost * amount;
-                Label lsetc = this.FindByName<Label>("lsetc");
-                Label lss = this.FindByName<Label>("lss");
-                lsetc.Text = subtotaltopping.ToString("n2");
-                Decimal subtotal = subtotaltopping + subtotalpizza;
-                lss.Text = subtotal.ToString("n2");
-            }
-            else
-            {
-                lsetc.Text = 0.0.ToString("n0");
-            }
+            Label lsetp = this.FindByName<Label>("lsetp");
+            Decimal cost = 0.0m;
+            Decimal.TryParse(lsetp.Text, out cost);
+            Entry lset = this.FindByName<Entry>("lset");
+            Decimal amount = 0.0m;
+            Decimal.TryParse(lset.Text, out amount);
+            Decimal subtotaltopping = cost * amount;
+            Label lsetc = this.FindByName<Label>("lsetc");
+            Label lss = this.FindByName<Label>("lss");
+            lsetc.Text = subtotaltopping.ToString("n2");
+            Decimal subtotal = subtotaltopping + subtotalpizza;
+            lss.Text = subtotal.ToString("n2");
             this.calcTotal();
         }
 
@@ -142,13 +137,25 @@ namespace App2
             Decimal subtotalpizza = cost * amount;
             Label ssc = this.FindByName<Label>("ssc");
             ssc.Text = subtotalpizza.ToString("n2");
-            Label sss = this.FindByName<Label>("sss");
-            Label ssetc = this.FindByName<Label>("ssetc");
-            Decimal subtotaltopping = 0.0m;
-            Decimal.TryParse(ssetc.Text, out subtotaltopping);
-            Decimal subtotal = subtotalpizza + subtotaltopping;
-            sss.Text = subtotal.ToString("n2");
-            this.calcTotal();
+            if (amount > 0)
+            {
+                sset.IsEnabled = true;
+                Label sss = this.FindByName<Label>("sss");
+                Label ssetc = this.FindByName<Label>("ssetc");
+                Decimal subtotaltopping = 0.0m;
+                Decimal.TryParse(ssetc.Text, out subtotaltopping);
+                Decimal subtotal = subtotalpizza + subtotaltopping;
+                sss.Text = subtotal.ToString("n2");
+                this.calcTotal();
+            }
+            else
+            {
+                Entry sset = this.FindByName<Entry>("sset");
+                sset.Text = "";
+                Label sss = this.FindByName<Label>("sss");
+                sss.Text = "0";
+                sset.IsEnabled = false;
+            }
         }
 
         private void Sset_TextChanged(object sender, TextChangedEventArgs e)
@@ -182,13 +189,25 @@ namespace App2
             Decimal subtotalpizza = cost * amount;
             Label lbc = this.FindByName<Label>("lbc");
             lbc.Text = subtotalpizza.ToString("n2");
-            Label lbs = this.FindByName<Label>("lbs");
-            Label lbetc = this.FindByName<Label>("lbetc");
-            Decimal subtotaltopping = 0.0m;
-            Decimal.TryParse(lbetc.Text, out subtotaltopping);
-            Decimal subtotal = subtotalpizza + subtotaltopping;
-            lbs.Text = subtotal.ToString("n2");
-            this.calcTotal();
+            if (amount > 0)
+            {
+                lbet.IsEnabled = true;
+                Label lbs = this.FindByName<Label>("lbs");
+                Label lbetc = this.FindByName<Label>("lbetc");
+                Decimal subtotaltopping = 0.0m;
+                Decimal.TryParse(lbetc.Text, out subtotaltopping);
+                Decimal subtotal = subtotalpizza + subtotaltopping;
+                lbs.Text = subtotal.ToString("n2");
+                this.calcTotal();
+            }
+            else
+            {
+                Entry lbet = this.FindByName<Entry>("lbet");
+                lbet.Text = "";
+                Label lbs = this.FindByName<Label>("lbs");
+                lbs.Text = "0";
+                lbet.IsEnabled = false;
+            }
         }
 
         private void Lbet_TextChanged(object sender, TextChangedEventArgs e)
@@ -222,14 +241,26 @@ namespace App2
             Decimal subtotalpizza = cost * amount;
             Label sbc = this.FindByName<Label>("sbc");
             sbc.Text = subtotalpizza.ToString("n2");
-            Label sbs = this.FindByName<Label>("sbs");
-            Label sbetc = this.FindByName<Label>("sbetc");
-            Decimal subtotaltopping = 0.0m;
-            Decimal.TryParse(sbetc.Text, out subtotaltopping);
-            Decimal subtotal = subtotalpizza + subtotaltopping;
-            sbs.Text = subtotal.ToString("n2");
-            this.calcTotal();
-        }
+            if (amount > 0)
+            {
+                sbet.IsEnabled = true;
+                Label sbs = this.FindByName<Label>("sbs");
+                Label sbetc = this.FindByName<Label>("sbetc");
+                Decimal subtotaltopping = 0.0m;
+                Decimal.TryParse(sbetc.Text, out subtotaltopping);
+                Decimal subtotal = subtotalpizza + subtotaltopping;
+                sbs.Text = subtotal.ToString("n2");
+                this.calcTotal();
+            }
+            else
+            {
+                Entry sbet = this.FindByName<Entry>("sbet");
+                sbet.Text = "";
+                Label sbs = this.FindByName<Label>("sbs");
+                sbs.Text = "0";
+                sbet.IsEnabled = false;
+            }
+}
 
         private void Sbet_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -398,6 +429,8 @@ namespace App2
             Switch discountSwitch = this.FindByName<Switch>("discountswitch");
             discountSwitch.IsToggled = false;
 
+            Label lblgrandtotal = this.FindByName<Label>("grandtotal");
+            lblgrandtotal.Text = (tax + sep).ToString("n2");
 
 
         }
@@ -433,6 +466,22 @@ namespace App2
 
             Entry lsa = this.FindByName<Entry>("lsa");
             lsa.Text = clearall.ToString("n0");
+            Entry ssa = this.FindByName<Entry>("ssa");
+            ssa.Text = clearall.ToString("n0");
+            Entry lba = this.FindByName<Entry>("lba");
+            lba.Text = clearall.ToString("n0");
+            Entry sba = this.FindByName<Entry>("sba");
+            sba.Text = clearall.ToString("n0");
+            Entry cba = this.FindByName<Entry>("cba");
+            cba.Text = clearall.ToString("n0");
+            Entry bsa = this.FindByName<Entry>("bsa");
+            bsa.Text = clearall.ToString("n0");
+            Entry lsalada = this.FindByName<Entry>("lsalada");
+            lsalada.Text = clearall.ToString("n0");
+            Entry ssalada = this.FindByName<Entry>("ssalada");
+            ssalada.Text = clearall.ToString("n0");
+            Entry seperation = this.FindByName<Entry>("seperation");
+            seperation.Text = "1";
         }
         //private void Oneditpricebuttonclicked(object sender, EventArgs e)
         //{

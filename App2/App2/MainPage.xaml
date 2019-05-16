@@ -73,8 +73,10 @@
                  x:Name="lsp"/>
         
         <Entry Placeholder="0"
-                 Grid.Row="1" Grid.Column="2" x:Name="lsa"
-                 TextChanged="Lsa_TextChanged"/>
+                 Grid.Row="1" Grid.Column="2" 
+                 x:Name="lsa"
+                 TextChanged="Lsa_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="1" Grid.Column="3" 
@@ -83,7 +85,8 @@
         <Entry Placeholder="0"
                  Grid.Row="1" Grid.Column="4" 
                  x:Name="lset"
-                 TextChanged="Lset_TextChanged"/>
+                 TextChanged="Lset_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="2.50"
                  Grid.Row="1" Grid.Column="5" 
@@ -116,7 +119,8 @@
         <Entry Placeholder="0"
                  Grid.Row="2" Grid.Column="2" 
                  x:Name="ssa"
-                 TextChanged="Ssa_TextChanged"/>
+                 TextChanged="Ssa_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="2" Grid.Column="3" 
@@ -125,7 +129,8 @@
         <Entry Placeholder="0"
                  Grid.Row="2" Grid.Column="4" 
                  x:Name="sset"
-                 TextChanged="Sset_TextChanged"/>
+                 TextChanged="Sset_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="1.50"
                  Grid.Row="2" Grid.Column="5" 
@@ -146,7 +151,8 @@
                  Text="1"
                  Grid.Row="2" Grid.Column="9" 
                  x:Name="seperation"
-                 TextChanged="sep_TextChanged"/>
+                 TextChanged="sep_TextChanged"
+                 Keyboard="Numeric"/>
 
 
         <Label Text="Large Build Your Own"
@@ -159,7 +165,8 @@
         <Entry Placeholder="0"
                  Grid.Row="3" Grid.Column="2" 
                  x:Name="lba"
-                 TextChanged="Lba_TextChanged"/>
+                 TextChanged="Lba_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="3" Grid.Column="3" 
@@ -168,7 +175,8 @@
         <Entry Placeholder="0"
                  Grid.Row="3" Grid.Column="4" 
                  x:Name="lbet"
-                 TextChanged="Lbet_TextChanged"/>
+                 TextChanged="Lbet_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="2.50"
                  Grid.Row="3" Grid.Column="5" 
@@ -200,7 +208,8 @@
         <Entry Placeholder="0"
                  Grid.Row="4" Grid.Column="2" 
                  x:Name="sba"
-                 TextChanged="Sba_TextChanged"/>
+                 TextChanged="Sba_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="4" Grid.Column="3" 
@@ -209,7 +218,8 @@
         <Entry Placeholder="0"
                  Grid.Row="4" Grid.Column="4" 
                  x:Name="sbet"
-                 TextChanged="Sbet_TextChanged"/>
+                 TextChanged="Sbet_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="1.50"
                  Grid.Row="4" Grid.Column="5" 
@@ -241,7 +251,8 @@
         <Entry Placeholder="0"
                  Grid.Row="5" Grid.Column="2" 
                  x:Name="cba"
-                 TextChanged="Cba_TextChanged"/>
+                 TextChanged="Cba_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="5" Grid.Column="3" 
@@ -278,7 +289,8 @@
         <Entry Placeholder="0"
                  Grid.Row="6" Grid.Column="2" 
                  x:Name="bsa"
-                  TextChanged="Bsa_TextChanged"/>
+                 TextChanged="Bsa_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="6" Grid.Column="3" 
@@ -314,7 +326,8 @@
         <Entry Placeholder="0"
                  Grid.Row="7" Grid.Column="2" 
                  x:Name="ssalada"
-                 TextChanged="Ssalada_TextChanged"/>
+                 TextChanged="Ssalada_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="7" Grid.Column="3" 
@@ -352,7 +365,8 @@
         <Entry Placeholder="0"
                  Grid.Row="8" Grid.Column="2" 
                  x:Name="lsalada"
-                 TextChanged="Lsalada_TextChanged"/>
+                 TextChanged="Lsalada_TextChanged"
+                 Keyboard="Numeric"/>
 
         <Label Text="0"
                  Grid.Row="8" Grid.Column="3" 
